@@ -5,26 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Asociarse | PASER</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
   <nav class="bg-blue-800 text-white p-4 shadow">
     <div class="container mx-auto flex justify-between items-center px-4">
       <div class="flex items-center space-x-3">
-  <img src="logo-paser2.PNG" alt="Logo Asociación PASER" class="h-40 w-auto" />
-  <h1 class="text-4xl font-bold">¡Asociate!</h1>
-</div>  
+        <img src="logo-paser2.PNG" alt="Logo Asociación PASER" class="h-40 w-auto" />
+        <h1 class="text-4xl font-bold">¡Asociate!</h1>
+      </div>  
     
-    <!-- Botón hamburguesa (solo visible en móviles) -->
-    <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
-           viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-              d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
+      <!-- Botón hamburguesa (solo visible en móviles) -->
+      <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
 
     <!-- Menú de navegación -->
-    <ul id="mobile-menu" class="hidden md:flex space-x-4 text-lg md:space-x-4 md:items-center md:ml-auto md:flex-row flex-col mt-4 md:mt-0">
+    <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row md:items-center md:justify-end space-y-2 md:space-y-0 md:space-x-4 px-4 mt-4 md:mt-0 text-lg">
       <li><a href="index.html" class="hover:underline">Inicio</a></li>
       <li><a href="quienes-somos.html" class="hover:underline">Quiénes Somos</a></li>
       <li><a href="paser.html" class="hover:underline">¿Qué es PASER?</a></li>
@@ -32,9 +39,7 @@
       <li><a href="asociarse.html" class="hover:underline">Asociate</a></li>
       <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
     </ul>
-  </div>
-</nav>
-
+  </nav>
 
   <header class="bg-blue-900 text-white py-6 shadow-md">
     <div class="max-w-5xl mx-auto px-4">
