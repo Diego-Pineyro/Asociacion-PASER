@@ -5,49 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Asociarse | PASER</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    }
-  </script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
-  <nav class="bg-blue-800 text-white p-4 shadow">
-    <div class="container mx-auto flex justify-between items-center px-4">
-      <div class="flex items-center space-x-3">
-        <img src="logo-paser2.PNG" alt="Logo Asociación PASER" class="h-40 w-auto" />
-        <h1 class="text-4xl font-bold">¡Asociate!</h1>
-      </div>  
-    
-      <!-- Botón hamburguesa (solo visible en móviles) -->
+
+  <!-- Navbar -->
+  <nav class="bg-blue-800 text-white p-4 shadow-md">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <!-- Logo y Título -->
+      <div class="flex items-center space-x-4">
+        <img src="logo-paser2.PNG" alt="Logo Asociación PASER" class="h-12 w-auto" />
+        <h1 class="text-2xl font-bold">¡Asociate!</h1>
+      </div>
+
+      <!-- Botón hamburguesa -->
       <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
              viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-    </div>
 
-    <!-- Menú de navegación -->
-    <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row md:items-center md:justify-end space-y-2 md:space-y-0 md:space-x-4 px-4 mt-4 md:mt-0 text-lg">
-      <li><a href="index.html" class="hover:underline">Inicio</a></li>
-      <li><a href="quienes-somos.html" class="hover:underline">Quiénes Somos</a></li>
-      <li><a href="paser.html" class="hover:underline">¿Qué es PASER?</a></li>
-      <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
-      <li><a href="asociarse.html" class="hover:underline">Asociate</a></li>
-      <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
-    </ul>
+      <!-- Menú principal -->
+      <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 text-lg">
+        <li><a href="index.html" class="hover:underline">Inicio</a></li>
+        <li><a href="quienes-somos.html" class="hover:underline">Quiénes Somos</a></li>
+        <li><a href="paser.html" class="hover:underline">¿Qué es PASER?</a></li>
+        <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
+        <li><a href="asociarse.html" class="hover:underline">Asociate</a></li>
+        <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+      </ul>
+    </div>
   </nav>
 
+  <!-- Script para menú hamburguesa -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+
+  <!-- Header -->
   <header class="bg-blue-900 text-white py-6 shadow-md">
-    <div class="max-w-5xl mx-auto px-4">
-      <h1 class="text-3xl font-bold text-center">Asociate a PASER</h1>
-      <p class="text-sm mt-1 text-center">Unite a nuestra misión para cuidar a quienes nos cuidan</p>
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold">Asociate a PASER</h1>
+      <p class="text-sm mt-1">Unite a nuestra misión para cuidar a quienes nos cuidan</p>
     </div>
   </header>
 
+  <!-- Contenido principal -->
   <main class="max-w-6xl mx-auto px-4 py-10">
     <div class="text-center mb-10 px-2">
       <h2 class="text-2xl font-semibold mb-4">Elegí el plan que más se adapte a vos</h2>
@@ -55,7 +62,7 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      
+
       <!-- Socio Full -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between text-center">
         <div>
@@ -101,9 +108,11 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-blue-900 text-white py-4 text-center mt-10">
     <p class="text-sm">&copy; 2025 Asociación PASER. Todos los derechos reservados.</p>
   </footer>
 
 </body>
 </html>
+
