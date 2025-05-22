@@ -9,35 +9,33 @@
 <body class="bg-gray-100 text-gray-800 font-sans">
 
   <!-- Navbar -->
-  <nav class="bg-blue-800 text-white py-4 shadow-md">
-    <div class="container mx-auto flex items-center justify-between px-4">
+  <nav class="bg-blue-800 text-white shadow-md">
+    <div class="container mx-auto flex items-center justify-between px-4 py-4">
       <!-- Logo y Título -->
-      <div class="flex items-center space-x-2 md:space-x-4">
-        <!-- Logo responsivo -->
+      <div class="flex items-center space-x-4">
         <img src="logo-paser2.PNG" alt="Logo Asociación PASER" class="h-10 md:h-12 w-auto" />
-        <!-- Texto responsivo -->
         <h1 class="text-xl md:text-2xl font-bold">¡Asociate!</h1>
       </div>
 
       <!-- Botón hamburguesa -->
-      <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+      <button class="md:hidden focus:outline-none" aria-label="Toggle menu" onclick="toggleMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
                 d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-
-      <!-- Menú principal -->
-      <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 text-base">
-        <li><a href="index.html" class="hover:underline">Inicio</a></li>
-        <li><a href="quienes-somos.html" class="hover:underline">Quiénes Somos</a></li>
-        <li><a href="paser.html" class="hover:underline">¿Qué es PASER?</a></li>
-        <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
-        <li><a href="asociarse.html" class="hover:underline">Asociate</a></li>
-        <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
-      </ul>
     </div>
+
+    <!-- Menú principal -->
+    <ul id="mobile-menu" class="hidden md:flex md:flex-row md:space-x-6 text-lg bg-blue-800 md:bg-transparent px-4 md:px-0">
+      <li><a href="index.html" class="block py-2 md:py-0 hover:underline">Inicio</a></li>
+      <li><a href="quienes-somos.html" class="block py-2 md:py-0 hover:underline">Quiénes Somos</a></li>
+      <li><a href="paser.html" class="block py-2 md:py-0 hover:underline">¿Qué es PASER?</a></li>
+      <li><a href="servicios.html" class="block py-2 md:py-0 hover:underline">Servicios</a></li>
+      <li><a href="asociarse.html" class="block py-2 md:py-0 hover:underline">Asociate</a></li>
+      <li><a href="contacto.html" class="block py-2 md:py-0 hover:underline">Contacto</a></li>
+    </ul>
   </nav>
 
   <!-- Script para menú hamburguesa -->
