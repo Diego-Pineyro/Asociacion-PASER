@@ -5,101 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quiénes somos | PASER</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+
+  <!-- Navbar -->
   <nav class="bg-blue-800 text-white p-4 shadow">
-  <div class="container mx-auto flex justify-between items-center px-4">
-    <!-- Logo y Título -->
-    <div class="flex items-center space-x-3">
-      <img src="logo-paser2.PNG" alt="Logo Asociación PASER" class="h-24 w-auto" />
-      <h1 class="text-3xl font-bold">¿Quiénes Somos?</h1>
+    <div class="container mx-auto flex flex-wrap justify-between items-center px-4">
+      <!-- Logo y Título -->
+      <div class="flex items-center space-x-3">
+        <img src="logo-paser2.PNG" alt="Logo Asociación PASER" class="h-24 w-auto" />
+        <h1 class="text-3xl md:text-4xl font-bold">¿Quiénes Somos?</h1>
+      </div>
+
+      <!-- Botón hamburguesa (visible solo en móviles) -->
+      <button class="md:hidden focus:outline-none" onclick="toggleMenu()" aria-label="Abrir menú de navegación">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Menú (versión desktop) -->
+      <ul class="hidden md:flex md:items-center md:space-x-6 text-lg">
+        <li><a href="index.html" class="hover:underline">Inicio</a></li>
+        <li><a href="quienes-somos.html" class="hover:underline">Quiénes Somos</a></li>
+        <li><a href="paser.html" class="hover:underline">¿Qué es PASER?</a></li>
+        <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
+        <li><a href="asociarse.html" class="hover:underline">Asociate</a></li>
+        <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+      </ul>
     </div>
 
-    <!-- Botón hamburguesa (visible solo en móviles) -->
-    <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
-           viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-              d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
+    <!-- Menú (versión móvil) -->
+    <ul id="mobile-menu" class="hidden flex-col space-y-2 bg-blue-800 text-white p-4 md:hidden">
+      <li><a href="index.html" class="hover:underline">Inicio</a></li>
+      <li><a href="quienes-somos.html" class="hover:underline">Quiénes Somos</a></li>
+      <li><a href="paser.html" class="hover:underline">¿Qué es PASER?</a></li>
+      <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
+      <li><a href="asociarse.html" class="hover:underline">Asociate</a></li>
+      <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+    </ul>
+  </nav>
 
-  <!-- Menú de navegación -->
-  <ul id="mobile-menu" class="hidden flex-col space-y-2 bg-blue-800 text-white p-4 md:flex md:flex-row md:space-x-4 md:bg-transparent md:p-0 md:items-center md:ml-auto">
-    <li><a href="index.html" class="hover:underline">Inicio</a></li>
-    <li><a href="quienes-somos.html" class="hover:underline">Quiénes Somos</a></li>
-    <li><a href="paser.html" class="hover:underline">¿Qué es PASER?</a></li>
-    <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
-    <li><a href="asociarse.html" class="hover:underline">Asociate</a></li>
-    <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
-  </ul>
-</nav>
-
-
-
+  <!-- Encabezado -->
   <header class="bg-blue-900 text-white py-6 shadow-md">
     <div class="max-w-5xl mx-auto px-4">
       <h1 class="text-3xl font-bold">Asociación PASER</h1>
       <p class="text-sm mt-1">Procesamiento Asistido en Situaciones Estresantes Recientes</p>
     </div>
-    <script>
-  function toggleMenu() {
-    const menu = document.getElementById("mobile-menu");
-    if (menu.classList.contains("hidden")) {
-      menu.classList.remove("hidden");
-      menu.classList.add("flex");
-    } else {
-      menu.classList.add("hidden");
-      menu.classList.remove("flex");
-    }
-  }
-</script>
-
   </header>
 
+  <!-- Contenido principal -->
   <main class="max-w-5xl mx-auto px-4 py-10 space-y-10">
     <section>
       <h2 class="text-2xl font-semibold mb-4">Quiénes somos</h2>
-      <p class="mb-4">
-        Somos un grupo de investigadores y docentes pertenecientes a distintas universidades nacionales. Nos une el compromiso con el bienestar de quienes día a día enfrentan situaciones de alto impacto emocional: rescatistas, personal militar y policial.
-      </p>
-      <p class="mb-4">
-        Nuestra asociación civil sin fines de lucro nace con el objetivo de brindar psicoterapia idónea, adaptada y científicamente validada, ajustada a las características particulares de esta población.
-      </p>
+      <p class="mb-4">Somos un grupo de investigadores y docentes pertenecientes a distintas universidades nacionales. Nos une el compromiso con el bienestar de quienes día a día enfrentan situaciones de alto impacto emocional: rescatistas, personal militar y policial.</p>
+      <p class="mb-4">Nuestra asociación civil sin fines de lucro nace con el objetivo de brindar psicoterapia idónea, adaptada y científicamente validada, ajustada a las características particulares de esta población.</p>
     </section>
 
     <section>
       <h2 class="text-2xl font-semibold mb-4">Nuestra misión</h2>
-      <p class="mb-4">
-        Cuidar la salud mental y el bienestar del personal que actúa en contextos de emergencia y riesgo, desarrollando herramientas innovadoras basadas en neurociencias y en inteligencia artificial. Buscamos reducir el sufrimiento psíquico y mejorar la calidad de vida de quienes cumplen un rol esencial para la sociedad.
-      </p>
+      <p class="mb-4">Cuidar la salud mental y el bienestar del personal que actúa en contextos de emergencia y riesgo, desarrollando herramientas innovadoras basadas en neurociencias y en inteligencia artificial. Buscamos reducir el sufrimiento psíquico y mejorar la calidad de vida de quienes cumplen un rol esencial para la sociedad.</p>
     </section>
 
     <section>
       <h2 class="text-2xl font-semibold mb-4">La problemática</h2>
-      <p class="mb-4">
-        Muchos rescatistas, militares y policías no buscan ayuda psicológica por miedo a ser estigmatizados, perder ascensos o incluso su empleo. Esto genera que problemáticas como los trastornos de ansiedad —que afectan a cerca del 35% de este grupo, cuando el promedio general ronda el 5%— no sean tratadas a tiempo.
-      </p>
-      <p class="mb-4">
-        Las tasas de suicidio también son alarmantes: en estas poblaciones llegan a ser 4 a 5 veces más altas que el promedio nacional. Frente a esta realidad, nuestra respuesta es una intervención ética, científica y respetuosa del anonimato y la identidad profesional de cada persona.
-      </p>
+      <p class="mb-4">Muchos rescatistas, militares y policías no buscan ayuda psicológica por miedo a ser estigmatizados, perder ascensos o incluso su empleo. Esto genera que problemáticas como los trastornos de ansiedad —que afectan a cerca del 35% de este grupo, cuando el promedio general ronda el 5%— no sean tratadas a tiempo.</p>
+      <p class="mb-4">Las tasas de suicidio también son alarmantes: en estas poblaciones llegan a ser 4 a 5 veces más altas que el promedio nacional. Frente a esta realidad, nuestra respuesta es una intervención ética, científica y respetuosa del anonimato y la identidad profesional de cada persona.</p>
     </section>
 
     <section>
       <h2 class="text-2xl font-semibold mb-4">Cómo sostenemos la asociación</h2>
-      <p class="mb-4">
-        La Asociación PASER se mantiene gracias a las cuotas colaborativas de sus socios. Los aportes son accesibles y permiten ofrecer servicios de alta calidad: psicoterapias adaptadas, capacitaciones certificadas, y el desarrollo de nuevas herramientas científicas basadas en evidencia.
-      </p>
-      <p class="mb-4">
-        Al asociarte, no solo accedés a recursos únicos, sino que colaborás con una causa vital: proteger la salud mental de quienes nos protegen.
-      </p>
+      <p class="mb-4">La Asociación PASER se mantiene gracias a las cuotas colaborativas de sus socios. Los aportes son accesibles y permiten ofrecer servicios de alta calidad: psicoterapias adaptadas, capacitaciones certificadas, y el desarrollo de nuevas herramientas científicas basadas en evidencia.</p>
+      <p class="mb-4">Al asociarte, no solo accedés a recursos únicos, sino que colaborás con una causa vital: proteger la salud mental de quienes nos protegen.</p>
     </section>
   </main>
 
-  <footer class="bg-blue-900 text-white py-4 text-center">
-    <p class="text-sm">&copy; 2025 Asociación PASER. Todos los derechos reservados.</p>
+  <!-- Footer -->
+  <footer class="bg-blue-800 text-white py-6 mt-20">
+    <div class="container mx-auto text-center text-sm px-4">
+      © 2025 Asociación PASER - Todos los derechos reservados.
+    </div>
   </footer>
 
 </body>
