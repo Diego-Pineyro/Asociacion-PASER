@@ -1,159 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto | PASER</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Script para menú responsive (mismo que en las otras páginas)
-        function toggleMenu() {
-            const menu = document.getElementById("mobile-menu");
-            menu.classList.toggle("hidden");
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | PASER</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paserDark: '#1B365D',
+            paserLight: '#7297BA',
+          }
         }
-    </script>
+      }
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
 </head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
 
-<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
-
-    <nav class="bg-blue-800 text-white p-4 shadow">
-        <div class="container mx-auto flex flex-wrap justify-between items-center px-4">
-            <div class="flex items-center space-x-3">
-                <img src="logo-paser2.PNG" alt="Logo de la Asociación PASER" class="h-24 w-auto" />
-                <h1 class="text-3xl md:text-4xl font-bold">Contacto</h1>
-            </div>
-
-            <button class="md:hidden focus:outline-none" onclick="toggleMenu()" aria-label="Abrir menú de navegación">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-
-            <ul id="mobile-menu"
-                class="hidden md:flex md:items-center md:space-x-6 mt-4 md:mt-0 w-full md:w-auto flex-col md:flex-row text-lg bg-blue-800 md:bg-transparent p-4 md:p-0">
-                <li><a href="index.html" class="hover:underline">Inicio</a></li>
-                <li><a href="quienes-somos.html" class="hover:underline">Quiénes Somos</a></li>
-                <li><a href="paser.html" class="hover:underline">¿Qué es PASER?</a></li>
-                <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
-                <li><a href="asociarse.html" class="hover:underline">Asociate</a></li>
-                <li><a href="contacto.html" class="font-bold underline">Contacto</a></li>
-            </ul>
+  <header class="sticky top-0 z-50">
+    <nav class="bg-white border-b border-gray-200 text-paserDark p-4 shadow-md">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="flex items-center">
+          <img src="logo-paser2.PNG" alt="Logo de la Asociación PASER" class="h-28 md:h-32 w-auto object-contain" />
         </div>
+
+        <button class="md:hidden text-paserDark" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <ul id="mobile-menu" class="hidden md:flex md:items-center md:space-x-8 font-semibold uppercase text-sm tracking-wider">
+          <li><a href="index.html" class="hover:text-paserLight transition">Inicio</a></li>
+          <li><a href="quienes-somos.html" class="hover:text-paserLight transition">Quiénes Somos</a></li>
+          <li><a href="paser.html" class="hover:text-paserLight transition">¿Qué es PASER?</a></li>
+          <li><a href="servicios.html" class="hover:text-paserLight transition">Servicios</a></li>
+          <li><a href="asociarse.html" class="hover:text-paserLight transition">Asociate</a></li>
+          <li><a href="contacto.html" class="text-paserLight transition">Contacto</a></li>
+        </ul>
+      </div>
     </nav>
+  </header>
 
-    <header class="bg-blue-900 text-white py-8 shadow-md">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold">Estamos para escucharte</h2>
-            <p class="text-lg mt-2 text-blue-200">Envianos tu consulta y te responderemos a la brevedad.</p>
-        </div>
-    </header>
+  <section class="bg-paserDark py-16 text-white shadow-inner text-center">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight">Contacto</h1>
+      <div class="h-1.5 w-24 bg-paserLight mx-auto mb-6"></div>
+      <p class="text-xl font-light italic opacity-90">Estamos para escucharte y acompañarte</p>
+    </div>
+  </section>
 
-    <main class="container mx-auto my-12 px-4 max-w-6xl">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-            <div class="bg-white p-8 rounded-lg shadow-md h-fit">
-                <h3 class="text-2xl font-bold text-blue-900 mb-6">Información</h3>
-                <p class="mb-4 text-gray-600">
-                    Si tenés dudas sobre cómo asociarte, necesitás asistencia psicológica o querés saber más sobre
-                    nuestras capacitaciones, no dudes en escribirnos.
-                </p>
-
-                <div class="space-y-4">
-                    <div class="flex items-start space-x-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mt-1" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <div>
-                            <p class="font-semibold text-gray-800">Email:</p>
-                            <a href="mailto:asociacionpaser@gmail.com"
-                                class="text-blue-600 hover:underline">info@asociacionpaser.org</a>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start space-x-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mt-1" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        <div>
-                            <p class="font-semibold text-gray-800">Ubicación:</p>
-                            <p class="text-gray-600">Buenos Aires, Argentina</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-8 p-4 bg-blue-50 rounded border border-blue-100">
-                    <p class="text-sm text-blue-800 font-semibold">
-                        Atención: Si estás en una emergencia de riesgo de vida inminente, por favor comunicate con el
-                        servicio de emergencias local (911) o acudí a la guardia más cercana.
-                    </p>
-                </div>
+  <main class="max-w-6xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      
+      <div class="space-y-8">
+        <div class="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-paserLight">
+          <h3 class="text-2xl font-bold text-paserDark mb-6 uppercase tracking-wider">Canales de Comunicación</h3>
+          
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4 group">
+              <div class="bg-slate-100 p-3 rounded-full text-paserDark group-hover:bg-paserLight group-hover:text-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <a href="mailto:asociacionpaser@gmail.com" class="text-lg font-medium hover:text-paserLight transition">asociacionpaser@gmail.com</a>
             </div>
 
-            <div class="bg-white p-8 rounded-lg shadow-md">
-                <h3 class="text-2xl font-bold text-blue-900 mb-6">Envianos un mensaje</h3>
-
-                <form action="https://formsubmit.co/asociacionpaser@gmail.com" method="POST" class="space-y-4">
-
-                    <input type="hidden" name="_next" value="https://github.com/Diego-Pineyro/Asociacion-PASER.git">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="Nuevo mensaje desde la web PASER">
-
-                    <div>
-                        <label for="nombre" class="block text-gray-700 font-medium mb-1">Nombre y Apellido</label>
-                        <input type="text" id="nombre" name="name" required
-                            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-                    </div>
-
-                    <div>
-                        <label for="email" class="block text-gray-700 font-medium mb-1">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" required
-                            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-                    </div>
-
-                    <div>
-                        <label for="asunto" class="block text-gray-700 font-medium mb-1">Asunto</label>
-                        <select id="asunto" name="_subject_type"
-                            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-                            <option value="Consulta General">Consulta General</option>
-                            <option value="Quiero Asociarme">Quiero Asociarme</option>
-                            <option value="Solicitud de Asistencia">Solicitud de Asistencia</option>
-                            <option value="Capacitaciones">Capacitaciones</option>
-                            <option value="Otro">Otro</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="mensaje" class="block text-gray-700 font-medium mb-1">Mensaje</label>
-                        <textarea id="mensaje" name="message" rows="5" required
-                            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
-                    </div>
-
-                    <button type="submit"
-                        class="w-full bg-blue-700 text-white font-bold py-3 rounded-lg hover:bg-blue-800 transition duration-300 shadow-lg mt-2">
-                        Enviar Mensaje
-                    </button>
-
-                </form>
+            <div class="flex items-center space-x-4 group">
+              <div class="bg-slate-100 p-3 rounded-full text-paserDark group-hover:bg-paserLight group-hover:text-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke-width="2"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2"/>
+                </svg>
+              </div>
+              <a href="https://instagram.com/asociacionpaser" target="_blank" class="text-lg font-medium hover:text-paserLight transition">@asociacionpaser</a>
             </div>
 
+            <div class="flex items-center space-x-4 group">
+              <div class="bg-slate-100 p-3 rounded-full text-paserDark group-hover:bg-paserLight group-hover:text-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <p class="text-lg font-medium">Carlos A. López 2416, CABA, Argentina</p>
+            </div>
+          </div>
         </div>
-    </main>
 
-    <footer class="bg-blue-800 text-white py-6 mt-10">
-        <div class="container mx-auto text-center text-sm px-4">
-            © 2025 Asociación PASER - Todos los derechos reservados.
+        <div class="bg-white p-4 rounded-2xl shadow-xl border border-slate-200 h-80 overflow-hidden">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.156157585472!2d-58.4954442234575!3d-34.59894455731034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7cb988a6d71%3A0xc39f997637508493!2sCarlos%20Antonio%20L%C3%B3pez%202416%2C%20C1419CBB%20CABA!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar" 
+            class="w-full h-full rounded-xl" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
         </div>
-    </footer>
+      </div>
 
-    <script src="//code.tidio.co/jjzjhjkqjxuwsrwsx6sk5fjga3ftatnq.js" async></script>
+      <div class="bg-white p-10 rounded-2xl shadow-2xl border-t-8 border-paserDark">
+        <h3 class="text-3xl font-bold text-paserDark mb-8">Envianos un mensaje</h3>
+        
+        <form action="https://formsubmit.co/asociacionpaser@gmail.com" method="POST" class="space-y-6">
+          <input type="hidden" name="_captcha" value="false">
+          
+          <div>
+            <label class="block text-sm font-bold text-paserDark uppercase mb-2">Nombre y Apellido</label>
+            <input type="text" name="name" required class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition">
+          </div>
+
+          <div>
+            <label class="block text-sm font-bold text-paserDark uppercase mb-2">Correo Electrónico</label>
+            <input type="email" name="email" required class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition">
+          </div>
+
+          <div>
+            <label class="block text-sm font-bold text-paserDark uppercase mb-2">Asunto</label>
+            <select name="_subject" class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition">
+              <option>Consulta General</option>
+              <option>Quiero Asociarme</option>
+              <option>Solicitud de Asistencia</option>
+              <option>Capacitaciones</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-bold text-paserDark uppercase mb-2">Mensaje</label>
+            <textarea name="message" rows="4" required class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-paserDark text-white font-bold py-4 rounded-xl shadow-lg hover:bg-paserLight transition transform hover:scale-[1.02]">
+            Enviar Consulta
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-paserDark text-white py-12 border-t-4 border-paserLight">
+    <div class="container mx-auto text-center px-4">
+      <div class="inline-block bg-paserDark p-2 mb-6">
+        <img src="logo-paser2.PNG" alt="Logo PASER" class="h-24 mx-auto object-contain" />
+      </div>
+      <p class="text-lg font-semibold mb-2">Asociación Civil PASER</p>
+      <div class="h-px w-16 bg-paserLight mx-auto mb-4 opacity-50"></div>
+      <p class="text-sm opacity-60 uppercase tracking-widest">© 2026 - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="//code.tidio.co/jjzjhjkqjxuwsrwsx6sk5fjga3ftatnq.js" async></script>
 </body>
-
 </html>

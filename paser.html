@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Qué es PASER? | Asociación PASER</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paserDark: '#1B365D',
+            paserLight: '#7297BA',
+          }
+        }
+      }
+    }
+    function toggleMenu() {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+  <style>
+    .paser-hero-bg {
+      background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(27, 54, 93, 0.85)), 
+                  url('img/foto-equipo-paser-bn.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+
+  <header class="sticky top-0 z-50">
+    <nav class="bg-white border-b border-gray-200 text-paserDark p-4 shadow-md">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="flex items-center">
+          <img src="logo-paser2.PNG" alt="Logo de la Asociación PASER" class="h-28 md:h-32 w-auto object-contain" />
+        </div>
+        <button class="md:hidden text-paserDark" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <ul id="mobile-menu" class="hidden md:flex md:items-center md:space-x-8 font-semibold uppercase text-sm tracking-wider">
+          <li><a href="index.html" class="hover:text-paserLight transition">Inicio</a></li>
+          <li><a href="quienes-somos.html" class="hover:text-paserLight transition">Quiénes Somos</a></li>
+          <li><a href="paser.html" class="text-paserLight transition">¿Qué es PASER?</a></li>
+          <li><a href="servicios.html" class="hover:text-paserLight transition">Servicios</a></li>
+          <li><a href="asociarse.html" class="hover:text-paserLight transition">Asociate</a></li>
+          <li><a href="contacto.html" class="hover:text-paserLight transition">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="paser-hero-bg py-24 text-white text-center">
+    <div class="container mx-auto px-4 relative z-10">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 uppercase tracking-tighter">¿Qué es la Técnica PASER?</h1>
+      <div class="h-1.5 w-24 bg-paserLight mx-auto mb-6"></div>
+      <p class="text-xl md:text-2xl font-light italic opacity-95 max-w-4xl mx-auto">
+        Procesamiento Asistido de Situaciones Estresantes Recientes.
+      </p>
+    </div>
+  </section>
+
+  <main class="max-w-6xl mx-auto px-6 py-16">
+    
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+      <div>
+        <h2 class="text-3xl font-bold text-paserDark mb-6 uppercase tracking-wide">Innovación en Primeros Auxilios Psicológicos</h2>
+        <p class="text-lg text-gray-700 mb-6">
+          PASER es un dispositivo diseñado específicamente para brindar asistencia inmediata a quienes enfrentan situaciones de alto impacto emocional: **rescatistas, personal policial y militar**.
+        </p>
+        <p class="text-lg text-gray-700">
+          Su objetivo principal es permitir la **reconsolidación temprana del recuerdo** cuando la experiencia es reciente, evitando que el evento se transforme en un trauma crónico y previniendo patologías como el TEPT, ataques de pánico o depresión.
+        </p>
+      </div>
+      <div class="bg-paserDark text-white p-10 rounded-2xl shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-10">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Rompiendo la barrera del miedo</h3>
+        <p class="italic opacity-90 mb-4">
+          "Sabemos que el personal de seguridad a menudo evita pedir ayuda por temor a ser etiquetado, perder su arma reglamentaria, sus adicionales o sus posibilidades de ascenso."
+        </p>
+        <p class="font-bold text-paserLight uppercase tracking-widest text-sm">Confidencialidad Total - Sin Relato Verbal</p>
+      </div>
+    </div>
+
+    <section class="mb-24">
+      <h2 class="text-3xl font-bold text-center text-paserDark mb-12 uppercase">¿Por qué es efectiva?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-paserLight">
+          <h4 class="font-bold text-paserDark mb-3 text-xl">Sin necesidad de hablar</h4>
+          <p class="text-gray-600">El usuario no tiene que relatar el evento. Esto elimina resistencias y asegura la privacidad total ante sus superiores o pares.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-paserDark">
+          <h4 class="font-bold text-paserDark mb-3 text-xl">Aplicación Grupal</h4>
+          <p class="text-gray-600">Permite intervenir en escuadrones o equipos completos de forma simultánea, optimizando tiempos en contextos operativos.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-paserLight">
+          <h4 class="font-bold text-paserDark mb-3 text-xl">Bases Integradas</h4>
+          <p class="text-gray-600">Combina Terapia Cognitivo Conductual, Estimulación Bilateral (EMDR) y técnicas de Tercera Ola (relajación y meditación).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-100 -mx-6 px-6 py-16 rounded-3xl">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-paserDark mb-8 uppercase tracking-widest">Respaldo y Evidencia Científica</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          <div>
+            <div class="text-4xl font-extrabold text-paserLight">+1500</div>
+            <div class="text-sm uppercase text-gray-500 font-bold">Casos Exitosos</div>
+          </div>
+          <div>
+            <div class="text-4xl font-extrabold text-paserLight">+12</div>
+            <div class="text-sm uppercase text-gray-500 font-bold">Publicaciones</div>
+          </div>
+          <div>
+            <div class="text-4xl font-extrabold text-paserLight">+30</div>
+            <div class="text-sm uppercase text-gray-500 font-bold">Congresos</div>
+          </div>
+          <div>
+            <div class="text-4xl font-extrabold text-paserLight">3</div>
+            <div class="text-sm uppercase text-gray-500 font-bold">Países (Arg-Bol-Per)</div>
+          </div>
+        </div>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          La técnica PASER cuenta con validación científica a través de estudios con referato y presentaciones internacionales. Ha sido probada con éxito no solo en fuerzas de seguridad y defensa, sino también en población general.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-paserDark text-white py-12 border-t-4 border-paserLight">
+    <div class="container mx-auto text-center px-4">
+      <div class="inline-block bg-paserDark p-2 mb-6">
+        <img src="logo-paser2.PNG" alt="Logo PASER" class="h-24 mx-auto object-contain" />
+      </div>
+      <p class="text-lg font-semibold mb-2">Asociación Civil PASER</p>
+      <div class="h-px w-16 bg-paserLight mx-auto mb-4 opacity-50"></div>
+      <p class="text-sm opacity-60 uppercase tracking-widest">© 2026 - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="//code.tidio.co/jjzjhjkqjxuwsrwsx6sk5fjga3ftatnq.js" async></script>
+</body>
+</html>

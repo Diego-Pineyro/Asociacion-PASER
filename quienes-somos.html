@@ -6,93 +6,108 @@
   <title>Quiénes somos | PASER</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paserDark: '#1B365D',
+            paserLight: '#7297BA',
+          }
+        }
+      }
+    }
+
     function toggleMenu() {
       const menu = document.getElementById("mobile-menu");
       menu.classList.toggle("hidden");
     }
   </script>
+  <style>
+    /* Estilo para el fondo difuso en blanco y negro (Mismo efecto que en el inicio) */
+    .team-hero-bg {
+      background: linear-gradient(rgba(27, 54, 93, 0.8), rgba(27, 54, 93, 0.8)), 
+                  url('img/foto-equipo-paser-bn.png'); /* Usa la ruta correcta */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
 
-  <!-- Navbar -->
-  <nav class="bg-blue-800 text-white p-4 shadow">
-    <div class="container mx-auto flex flex-wrap justify-between items-center px-4">
-      <!-- Logo y Título -->
-      <div class="flex items-center space-x-3">
-        <img src="logo-paser2.PNG" alt="Logo Asociación PASER" class="h-24 w-auto" />
-        <h1 class="text-3xl md:text-4xl font-bold">¿Quiénes Somos?</h1>
-      </div>
-
-      <!-- Botón hamburguesa (visible solo en móviles) -->
-      <button class="md:hidden focus:outline-none" onclick="toggleMenu()" aria-label="Abrir menú de navegación">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-      <!-- Menú (versión desktop) -->
-      <ul class="hidden md:flex md:items-center md:space-x-6 text-lg">
-        <li><a href="index.html" class="hover:underline">Inicio</a></li>
-        <li><a href="quienes-somos.html" class="hover:underline">Quiénes Somos</a></li>
-        <li><a href="paser.html" class="hover:underline">¿Qué es PASER?</a></li>
-        <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
-        <li><a href="asociarse.html" class="hover:underline">Asociate</a></li>
-        <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
-      </ul>
-    </div>
-
-    <!-- Menú (versión móvil) -->
-    <ul id="mobile-menu" class="hidden flex-col space-y-2 bg-blue-800 text-white p-4 md:hidden">
-      <li><a href="index.html" class="hover:underline">Inicio</a></li>
-      <li><a href="quienes-somos.html" class="hover:underline">Quiénes Somos</a></li>
-      <li><a href="paser.html" class="hover:underline">¿Qué es PASER?</a></li>
-      <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
-      <li><a href="asociarse.html" class="hover:underline">Asociate</a></li>
-      <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
-    </ul>
-  </nav>
-
-  <!-- Encabezado -->
-  <header class="bg-blue-900 text-white py-6 shadow-md">
-    <div class="max-w-5xl mx-auto px-4">
-      <h1 class="text-3xl font-bold">Asociación PASER</h1>
-      <p class="text-sm mt-1">Procesamiento Asistido en Situaciones Estresantes Recientes</p>
-    </div>
-  </header>
-
-  <!-- Contenido principal -->
-  <main class="max-w-5xl mx-auto px-4 py-10 space-y-16">
-    
-    <section>
-      <h2 class="text-2xl font-semibold mb-4 text-blue-900 border-b-2 border-blue-200 pb-2">Quiénes somos</h2>
-      <p class="mb-4 text-lg">Somos un grupo de investigadores y docentes pertenecientes a distintas universidades nacionales. Nos une el compromiso con el bienestar de quienes día a día enfrentan situaciones de alto impacto emocional: rescatistas, personal militar y policial.</p>
-      <p class="mb-4">Nuestra asociación civil sin fines de lucro nace con el objetivo de brindar psicoterapia idónea, adaptada y científicamente validada, ajustada a las características particulares de esta población.</p>
-    </section>
-
-    <section>
-      <h2 class="text-2xl font-semibold mb-4 text-blue-900 border-b-2 border-blue-200 pb-2">Nuestra misión</h2>
-      <p>Cuidar la salud mental y el bienestar del personal que actúa en contextos de emergencia y riesgo, desarrollando herramientas innovadoras basadas en neurociencias y en inteligencia artificial.</p>
-    </section>
-
-    <section>
-      <h2 class="text-3xl font-bold mb-8 text-center text-blue-900">Autoridades Institucionales</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-800 flex flex-col items-center text-center">
-          <img src="img/vanina-fernandez.jpg" alt="Dra. Vanina Fernández" class="w-32 h-32 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-100">
-          <h3 class="text-xl font-bold">Dra. Vanina Fernández</h3>
-          <p class="text-blue-700 font-semibold mb-3">Presidenta</p>
-          <p class="text-sm text-gray-600 italic">Abogada (UBA)</p>
+  <header class="sticky top-0 z-50">
+    <nav class="bg-white border-b border-gray-200 text-paserDark p-4 shadow-md">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="flex items-center">
+          <img src="logo-paser2.PNG" alt="Logo de la Asociación PASER" class="h-28 md:h-32 w-auto object-contain" />
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-800 flex flex-col items-center text-center">
-          <img src="img/diego-pinyero.jpg" alt="Dr. Diego Piñeyro" class="w-32 h-32 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-100">
-          <h3 class="text-xl font-bold">Dr. Diego Piñeyro</h3>
-          <p class="text-blue-700 font-semibold mb-1">Secretario y Socio Fundador</p>
-          <p class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full mb-3 inline-block font-bold">Desarrollador de la Técnica PASER</p>
-          <ul class="text-sm text-gray-600">
+        <button class="md:hidden text-paserDark" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <ul id="mobile-menu" class="hidden md:flex md:items-center md:space-x-8 font-semibold uppercase text-sm tracking-wider">
+          <li><a href="index.html" class="hover:text-paserLight transition">Inicio</a></li>
+          <li><a href="quienes-somos.html" class="text-paserLight transition">Quiénes Somos</a></li>
+          <li><a href="paser.html" class="hover:text-paserLight transition">¿Qué es PASER?</a></li>
+          <li><a href="servicios.html" class="hover:text-paserLight transition">Servicios</a></li>
+          <li><a href="asociarse.html" class="bg-paserDark text-white px-5 py-2 rounded-full hover:bg-paserLight transition">Asociate</a></li>
+          <li><a href="contacto.html" class="hover:text-paserLight transition">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="team-hero-bg py-40 text-white relative">
+    <div class="container mx-auto text-center px-4 relative z-10">
+      <h2 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tighter uppercase">Nuestro Equipo</h2>
+      <div class="h-1.5 w-32 bg-paserLight mx-auto mb-8"></div>
+      <p class="text-2xl md:text-3xl font-light italic max-w-4xl mx-auto leading-tight">
+        Investigadores y docentes comprometidos con la salud mental.
+      </p>
+    </div>
+  </section>
+
+  <main class="max-w-6xl mx-auto px-6 py-16 space-y-24">
+    
+    <section class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-paserDark mb-6 flex items-center">
+          <span class="bg-paserLight w-2 h-8 mr-4 inline-block"></span>
+          Quiénes somos
+        </h2>
+        <div class="space-y-4 text-lg text-gray-700">
+          <p>Somos un grupo de investigadores y docentes pertenecientes a distintas universidades nacionales. Nos une el compromiso con el bienestar de quienes día a día enfrentan situaciones de alto impacto emocional: rescatistas, personal militar y policial.</p>
+          <p>Nuestra asociación civil sin fines de lucro nace con el objetivo de brindar psicoterapia idónea, adaptada y científicamente validada, ajustada a las características particulares de esta población.</p>
+        </div>
+      </div>
+      <div class="bg-paserDark/5 p-8 rounded-2xl border-l-8 border-paserDark">
+        <h2 class="text-3xl font-bold text-paserDark mb-4 italic">Nuestra misión</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Cuidar la salud mental y el bienestar del personal que actúa en contextos de emergencia y riesgo, desarrollando herramientas innovadoras basadas en neurociencias y en inteligencia artificial.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-bold mb-12 text-center text-paserDark uppercase tracking-widest">Autoridades Institucionales</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-8 border-paserLight flex flex-col items-center text-center transform hover:-translate-y-1 transition">
+          <img src="img/vanina-fernandez.jpg" alt="Dra. Vanina Fernández" class="w-40 h-40 rounded-full object-cover mb-6 border-4 border-slate-100 shadow-md">
+          <h3 class="text-2xl font-bold text-paserDark">Dra. Vanina Fernández</h3>
+          <p class="text-paserLight font-bold text-lg mb-4">Presidenta</p>
+          <p class="text-gray-600 italic border-t border-gray-100 pt-4 w-full">Abogada (UBA)</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-8 border-paserDark flex flex-col items-center text-center transform hover:-translate-y-1 transition">
+          <img src="img/diego-pinyero.jpg" alt="Dr. Diego Piñeyro" class="w-40 h-40 rounded-full object-cover mb-6 border-4 border-slate-100 shadow-md">
+          <h3 class="text-2xl font-bold text-paserDark">Dr. Diego Piñeyro</h3>
+          <p class="text-paserLight font-bold text-lg mb-2">Secretario y Socio Fundador</p>
+          <span class="text-xs bg-paserDark text-white px-3 py-1 rounded-full mb-4 font-bold tracking-widest uppercase">Desarrollador de la Técnica PASER</span>
+          <ul class="text-gray-600 space-y-1 text-sm border-t border-gray-100 pt-4 w-full">
             <li>Prof. Adjunto Metodología de la Investigación (UBA)</li>
             <li>Director Lab. Neurociencias e IA (Fac. del Ejército)</li>
           </ul>
@@ -101,90 +116,85 @@
     </section>
 
     <section>
-      <h2 class="text-3xl font-bold mb-10 text-center text-blue-900">Equipo de Profesionales</h2>
+      <h2 class="text-3xl font-bold mb-12 text-center text-paserDark uppercase tracking-widest">Equipo de Profesionales</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
-          <img src="img/diego-pinyero.jpg" alt="Dr. Diego Piñeyro" class="w-24 h-24 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-50">
-          <h3 class="font-bold text-lg">Dr. Diego Piñeyro</h3>
-          <p class="text-blue-600 text-sm font-medium">Director Académico</p>
-          <p class="text-xs text-gray-500 mt-2">Doctor en Psicología</p>
+        <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
+          <img src="img/alejandro-masin.jpg" alt="Lic. Alejandro Masín" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
+          <h3 class="font-bold text-lg text-paserDark">Lic. Alejandro Masín</h3>
+          <p class="text-paserLight text-sm font-bold">Psicólogo (UBA)</p>
+          <p class="text-xs text-gray-500 mt-2 uppercase">Terapeuta Cognitivo Conductual</p>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
-          <img src="img/alejandro-masin.jpg" alt="Lic. Alejandro Masín" class="w-24 h-24 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-50">
-          <h3 class="font-bold text-lg">Lic. Alejandro Masín</h3>
-          <p class="text-blue-600 text-sm font-medium">Psicólogo (UBA)</p>
-          <p class="text-xs text-gray-500 mt-2">Terapeuta Cognitivo Conductual</p>
+        <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
+          <img src="img/sebastian-soria.jpg" alt="Lic. Sebastián Soria Oroza" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
+          <h3 class="font-bold text-lg text-paserDark">Lic. Sebastián Soria Oroza</h3>
+          <p class="text-paserLight text-sm font-bold">Psicólogo (UBA)</p>
+          <p class="text-xs text-gray-500 mt-2 uppercase">Terapeuta Cognitivo Conductual</p>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
-          <img src="img/sebastian-soria.jpg" alt="Lic. Sebastián Soria Oroza" class="w-24 h-24 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-50">
-          <h3 class="font-bold text-lg">Lic. Sebastián Soria Oroza</h3>
-          <p class="text-blue-600 text-sm font-medium">Psicólogo (UBA)</p>
-          <p class="text-xs text-gray-500 mt-2">Terapeuta Cognitivo Conductual</p>
+        <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
+          <img src="img/lucia-romero.jpg" alt="Lic. Lucía Romero" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
+          <h3 class="font-bold text-lg text-paserDark">Lic. Lucía Romero</h3>
+          <p class="text-paserLight text-sm font-bold">Psicóloga (UAI)</p>
+          <p class="text-xs text-gray-500 mt-2 uppercase">Especialista en EMDR</p>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
-          <img src="img/lucia-romero.jpg" alt="Lic. Lucía Romero" class="w-24 h-24 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-50">
-          <h3 class="font-bold text-lg">Lic. Lucía Romero</h3>
-          <p class="text-blue-600 text-sm font-medium">Psicóloga (UAI)</p>
-          <p class="text-xs text-gray-500 mt-2">Especialista en EMDR</p>
+        <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
+          <img src="img/antonella-oliva.jpg" alt="Lic. Antonella Oliva" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
+          <h3 class="font-bold text-lg text-paserDark">Lic. Antonella Oliva</h3>
+          <p class="text-paserLight text-sm font-bold">Psicóloga (UBA)</p>
+          <p class="text-xs text-gray-500 mt-2 uppercase">Especialista en TCC</p>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
-          <img src="img/antonella-oliva.jpg" alt="Lic. Antonella Oliva" class="w-24 h-24 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-50">
-          <h3 class="font-bold text-lg">Lic. Antonella Oliva</h3>
-          <p class="text-blue-600 text-sm font-medium">Psicóloga (UBA)</p>
-          <p class="text-xs text-gray-500 mt-2">Especialista en TCC</p>
+        <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
+          <img src="img/mara-hahn.jpg" alt="Lic. Mara Hahn" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
+          <h3 class="font-bold text-lg text-paserDark">Lic. Mara Hahn</h3>
+          <p class="text-paserLight text-sm font-bold">Especialista en Emergentología</p>
+          <p class="text-xs text-gray-500 mt-2 uppercase">TCC y Trastornos de Ansiedad</p>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
-          <img src="img/mara-hahn.jpg" alt="Lic. Mara Hahn" class="w-24 h-24 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-50">
-          <h3 class="font-bold text-lg">Lic. Mara Hahn</h3>
-          <p class="text-blue-600 text-sm font-medium text-pretty">Especialista en Emergentología</p>
-          <p class="text-xs text-gray-500 mt-2">TCC y Trastornos de Ansiedad</p>
+        <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
+          <img src="img/lic-abel.jpg" alt="Lic. Abel Cunto" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
+          <h3 class="font-bold text-lg text-paserDark">Lic. Abel Cunto</h3>
+          <p class="text-paserLight text-sm font-bold">Psicólogo (UBA)</p>
+          <p class="text-xs text-gray-500 mt-2 uppercase">Especialista en TCC</p>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
-          <img src="img/lic-abel.jpg" alt="Lic. Abel" class="w-24 h-24 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-50">
-          <h3 class="font-bold text-lg">Lic. Abel Cunto</h3>
-          <p class="text-blue-600 text-sm font-medium">Psicólogo (UBA)</p>
-          <p class="text-xs text-gray-500 mt-2">Especialista en TCC</p>
+        <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
+          <img src="img/lic-veronica.jpg" alt="Lic. Verónica Di Costanzo" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
+          <h3 class="font-bold text-lg text-paserDark">Lic. Verónica Di Costanzo</h3>
+          <p class="text-paserLight text-sm font-bold">Psicóloga (UBA)</p>
+          <p class="text-xs text-gray-500 mt-2 uppercase">Especialista en Prevención del Suicidio</p>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
-          <img src="img/lic-veronica.jpg" alt="Lic. Verónica DiCostanzo" class="w-24 h-24 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-50">
-          <h3 class="font-bold text-lg">Lic. Verónica Di Costanzo</h3>
-          <p class="text-blue-600 text-sm font-medium">Psicóloga (UBA)</p>
-          <p class="text-xs text-gray-500 mt-2">Especialista en Prevención del Suicidio</p>
+        <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
+          <img src="img/lic-Candela.jpg" alt="Lic. Candela Morales" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
+          <h3 class="font-bold text-lg text-paserDark">Lic. Candela Morales</h3>
+          <p class="text-paserLight text-sm font-bold">Psicóloga (UBA)</p>
+          <p class="text-xs text-gray-500 mt-2 uppercase">Especialista en Trastornos e la Memoria</p>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
-          <img src="img/lic-Candela.jpg" alt="Lic. Candela Morales" class="w-24 h-24 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-50">
-          <h3 class="font-bold text-lg">Lic. Candela Morales</h3>
-          <p class="text-blue-600 text-sm font-medium">Psicóloga (UBA)</p>
-          <p class="text-xs text-gray-500 mt-2">Especialista en Trastornos e la Memoria</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
-          <img src="img/susana-ukutsu.jpg" alt="Mg. Susana Ukutsu" class="w-24 h-24 rounded-full object-cover mb-4 bg-gray-200 border-2 border-blue-50">
-          <h3 class="font-bold text-lg">Mg. Susana Ukutsu</h3>
-          <p class="text-blue-600 text-sm font-medium">Psicóloga (UBA)</p>
-          <p class="text-xs text-gray-500 mt-2">Magíster Especialista en Psicooncología</p>
+        <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
+          <img src="img/susana-ukutsu.jpg" alt="Mg. Susana Ukutsu" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
+          <h3 class="font-bold text-lg text-paserDark">Mg. Susana Ukutsu</h3>
+          <p class="text-paserLight text-sm font-bold">Psicóloga (UBA)</p>
+          <p class="text-xs text-gray-500 mt-2 uppercase">Magíster Especialista en Psicooncología</p>
         </div>
 
       </div>
     </section>
 
-    
-
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-blue-800 text-white py-6 mt-20">
-    <div class="container mx-auto text-center text-sm px-4">
-      © 2025 Asociación PASER - Todos los derechos reservados.
+  <footer class="bg-paserDark text-white py-12 border-t-4 border-paserLight">
+    <div class="container mx-auto text-center px-4">
+      <div class="inline-block bg-paserDark p-2 mb-6">
+        <img src="logo-paser2.PNG" alt="Logo PASER" class="h-24 mx-auto object-contain" />
+      </div>
+      <p class="text-lg font-semibold mb-2">Asociación Civil PASER</p>
+      <div class="h-px w-16 bg-paserLight mx-auto mb-4 opacity-50"></div>
+      <p class="text-sm opacity-60 uppercase tracking-widest">© 2026 - Todos los derechos reservados</p>
     </div>
   </footer>
 
