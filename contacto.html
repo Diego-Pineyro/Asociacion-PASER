@@ -113,37 +113,43 @@
         <h3 class="text-3xl font-bold text-paserDark mb-8">Envianos un mensaje</h3>
         
         <form action="https://formsubmit.co/asociacionpaser@gmail.com" method="POST" class="space-y-6">
-          <input type="hidden" name="_captcha" value="false">
-          
-          <div>
-            <label class="block text-sm font-bold text-paserDark uppercase mb-2">Nombre y Apellido</label>
-            <input type="text" name="name" required class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition">
-          </div>
+  
+  <input type="hidden" name="_language" value="es">
+  
+  <input type="hidden" name="_next" value="https://diego-pineyro.github.io/Asociacion-PASER/gracias.html">
+  
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  
+  <div>
+    <label class="block text-sm font-bold text-paserDark uppercase mb-2">Nombre Completo</label>
+    <input type="text" name="name" required class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition bg-slate-50">
+  </div>
 
-          <div>
-            <label class="block text-sm font-bold text-paserDark uppercase mb-2">Correo Electrónico</label>
-            <input type="email" name="email" required class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition">
-          </div>
+  <div>
+    <label class="block text-sm font-bold text-paserDark uppercase mb-2">Correo Electrónico</label>
+    <input type="email" name="email" required class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition bg-slate-50">
+  </div>
 
-          <div>
-            <label class="block text-sm font-bold text-paserDark uppercase mb-2">Asunto</label>
-            <select name="_subject" class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition">
-              <option>Consulta General</option>
-              <option>Quiero Asociarme</option>
-              <option>Solicitud de Asistencia</option>
-              <option>Capacitaciones</option>
-            </select>
-          </div>
+  <div>
+    <label class="block text-sm font-bold text-paserDark uppercase mb-2">Asunto</label>
+    <select name="subject" class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition bg-slate-50">
+      <option>Consulta General</option>
+      <option>Quiero Asociarme</option>
+      <option>Solicitud de Asistencia</option>
+      <option>Capacitaciones Académicas</option>
+    </select>
+  </div>
 
-          <div>
-            <label class="block text-sm font-bold text-paserDark uppercase mb-2">Mensaje</label>
-            <textarea name="message" rows="4" required class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition"></textarea>
-          </div>
+  <div>
+    <label class="block text-sm font-bold text-paserDark uppercase mb-2">Tu Mensaje</label>
+    <textarea name="message" rows="4" required class="w-full border-2 border-slate-100 rounded-xl px-4 py-3 focus:border-paserLight outline-none transition bg-slate-50"></textarea>
+  </div>
 
-          <button type="submit" class="w-full bg-paserDark text-white font-bold py-4 rounded-xl shadow-lg hover:bg-paserLight transition transform hover:scale-[1.02]">
-            Enviar Consulta
-          </button>
-        </form>
+  <button type="submit" class="w-full bg-paserDark text-white font-bold py-4 rounded-xl shadow-lg hover:bg-paserLight transition transform hover:scale-[1.02] active:scale-95">
+    Enviar Mensaje
+  </button>
+</form>
       </div>
     </div>
   </main>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¡Gracias! | PASER</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { paserDark: '#1B365D', paserLight: '#7297BA' } } }
+    }
+  </script>
+  <style>
+    .hero-bg {
+      background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(27, 54, 93, 0.85)), 
+                  url('img/foto-equipo-paser-bn.png');
+      background-size: cover; background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 flex flex-col min-h-screen">
+  <main class="flex-grow flex items-center justify-center py-20 hero-bg text-white">
+    <div class="text-center bg-white/10 backdrop-blur-md p-12 rounded-3xl border border-white/20 shadow-2xl max-w-2xl mx-6">
+      <div class="bg-paserLight w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h1 class="text-4xl font-bold mb-4 uppercase tracking-tighter">¡Mensaje Enviado!</h1>
+      <p class="text-xl opacity-90 mb-8 font-light italic">Gracias por comunicarte con la Asociación Civil PASER. Nos pondremos en contacto a la brevedad.</p>
+      <a href="index.html" class="inline-block bg-white text-paserDark font-bold px-8 py-3 rounded-full hover:bg-paserLight hover:text-white transition transform hover:scale-105">
+        Volver al Inicio
+      </a>
+    </div>
+  </main>
+</body>
+</html>
