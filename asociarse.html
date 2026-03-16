@@ -16,17 +16,15 @@
         }
       }
     }
-
     function toggleMenu() {
       const menu = document.getElementById("mobile-menu");
       menu.classList.toggle("hidden");
     }
   </script>
   <style>
-    /* Efecto Hero con la foto del equipo en blanco y negro */
     .asociate-hero-bg {
       background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(27, 54, 93, 0.85)), 
-                  url('img/foto-equipo-paser2-bn.png'); /* Ruta a tu imagen */
+                  url('img/foto-equipo-paser2-bn.png'); 
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -41,13 +39,11 @@
         <div class="flex items-center">
           <img src="logo-paser2.PNG" alt="Logo de la Asociación PASER" class="h-28 md:h-32 w-auto object-contain" />
         </div>
-
         <button class="md:hidden text-paserDark" onclick="toggleMenu()">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-
         <ul id="mobile-menu" class="hidden md:flex md:items-center md:space-x-8 font-semibold uppercase text-sm tracking-wider">
           <li><a href="index.html" class="hover:text-paserLight transition">Inicio</a></li>
           <li><a href="quienes-somos.html" class="hover:text-paserLight transition">Quiénes Somos</a></li>
@@ -60,36 +56,31 @@
     </nav>
   </header>
 
-  <section class="asociate-hero-bg py-24 text-white shadow-inner text-center">
+  <section class="asociate-hero-bg py-24 text-white text-center">
     <div class="container mx-auto px-4 relative z-10">
       <h1 class="text-4xl md:text-6xl font-extrabold mb-4 uppercase tracking-tighter">Asociate a PASER</h1>
       <div class="h-1.5 w-24 bg-paserLight mx-auto mb-6"></div>
-      <p class="text-xl md:text-2xl font-light italic opacity-95 max-w-3xl mx-auto">
-        Unite a nuestra misión para cuidar a quienes nos cuidan
-      </p>
+      <p class="text-xl md:text-2xl font-light italic opacity-95 max-w-3xl mx-auto">Unite a nuestra misión para cuidar a quienes nos cuidan</p>
     </div>
   </section>
 
   <main class="max-w-6xl mx-auto px-6 py-16">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold text-paserDark mb-4">Elegí el plan que más se adapte a vos</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Tu aporte permite sostener este proyecto científico, solidario y sin fines de lucro dedicado a la salud mental en contextos críticos.</p>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Tu aporte permite sostener este proyecto científico y solidario.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
       <div class="bg-white rounded-2xl shadow-xl border-t-8 border-gray-300 p-8 flex flex-col justify-between text-center transform hover:-translate-y-2 transition duration-300">
         <div>
           <h3 class="text-2xl font-bold text-paserDark mb-2">Socio Académico</h3>
           <div class="text-3xl font-extrabold text-paserDark mb-6">$45.000 <span class="text-sm font-normal text-gray-500">/ cuota</span></div>
-          <p class="text-gray-600 mb-6">Ideal para quienes buscan formación continua y actualización científica.</p>
           <ul class="space-y-3 text-gray-700 text-left mb-8 border-t border-gray-100 pt-6">
             <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> Cursos y seminarios mensuales</li>
             <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> Certificados de asistencia</li>
-            <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> Comunidad académica PASER</li>
           </ul>
         </div>
-        <a href="TU_LINK_MP_45000" target="_blank" class="bg-gray-200 text-paserDark font-bold py-3 rounded-full hover:bg-paserLight hover:text-white transition">Unirme Ahora</a>
+        <button onclick="abrirAvisoLegal('Socio Académico')" class="bg-gray-200 text-paserDark font-bold py-3 rounded-full hover:bg-paserLight hover:text-white transition">Unirme Ahora</button>
       </div>
 
       <div class="bg-white rounded-2xl shadow-2xl border-t-8 border-paserLight p-8 flex flex-col justify-between text-center transform scale-105 relative z-10">
@@ -97,44 +88,110 @@
         <div>
           <h3 class="text-2xl font-bold text-paserDark mb-2">Socio Full</h3>
           <div class="text-4xl font-extrabold text-paserDark mb-6">$80.000 <span class="text-sm font-normal text-gray-500">/ cuota</span></div>
-          <p class="text-gray-600 mb-6">Acceso completo a capacitaciones exclusivas y psicoterapia especializada.</p>
-          <ul class="space-y-3 text-gray-700 text-left mb-8 border-t border-gray-100 pt-6">
+          <ul class="space-y-3 text-gray-700 text-left mb-8 border-t border-gray-100 pt-6 text-sm">
             <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> <strong>Todo lo del plan Académico</strong></li>
             <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> Sesiones psicoterapéuticas</li>
             <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> Atención confidencial y anónima</li>
-            <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> Material científico exclusivo</li>
           </ul>
         </div>
-        <a href="https://mpago.la/2fvKo8b" target="_blank" class="bg-paserDark text-white font-bold py-4 rounded-full shadow-lg hover:bg-paserLight transition transform hover:scale-105">Unirme Ahora</a>
+        <button onclick="abrirAvisoLegal('Socio Full')" class="bg-paserDark text-white font-bold py-4 rounded-full shadow-lg hover:bg-paserLight transition transform hover:scale-105">Unirme Ahora</button>
       </div>
 
       <div class="bg-white rounded-2xl shadow-xl border-t-8 border-paserDark p-8 flex flex-col justify-between text-center transform hover:-translate-y-2 transition duration-300">
         <div>
           <h3 class="text-2xl font-bold text-paserDark mb-2">Socio Terapéutico</h3>
           <div class="text-3xl font-extrabold text-paserDark mb-6">$60.000 <span class="text-sm font-normal text-gray-500">/ cuota</span></div>
-          <p class="text-gray-600 mb-6">Enfocado exclusivamente en el acompañamiento clínico y contención.</p>
           <ul class="space-y-3 text-gray-700 text-left mb-8 border-t border-gray-100 pt-6">
-            <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> Sesiones de psicoterapia adaptadas</li>
-            <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> Contención especializada en crisis</li>
-            <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> Seguimiento profesional anónimo</li>
+            <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> Sesiones de psicoterapia</li>
+            <li class="flex items-start"><span class="text-paserLight mr-2">✔</span> Seguimiento profesional</li>
           </ul>
         </div>
-        <a href="TU_LINK_MP_60000" target="_blank" class="bg-paserDark text-white font-bold py-3 rounded-full hover:bg-paserLight transition">Unirme Ahora</a>
+        <button onclick="abrirAvisoLegal('Socio Terapéutico')" class="bg-paserDark text-white font-bold py-3 rounded-full hover:bg-paserLight transition">Unirme Ahora</button>
       </div>
-
     </div>
   </main>
 
-  <footer class="bg-paserDark text-white py-12 border-t-4 border-paserLight">
-    <div class="container mx-auto text-center px-4">
-      <div class="inline-block bg-paserDark p-2 mb-6">
-        <img src="logo-paser2.PNG" alt="Logo PASER" class="h-24 mx-auto object-contain" />
+  <div id="modalLegal" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden flex items-center justify-center p-4 backdrop-blur-sm">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl">
+      <div class="p-6 border-b border-gray-100 bg-paserDark text-white rounded-t-2xl">
+        <h2 class="text-2xl font-bold">Términos de Asociación y Admisión</h2>
+        <p id="nombrePlanModal" class="text-paserLight font-bold uppercase text-sm mt-1"></p>
       </div>
+      <div class="p-6 overflow-y-auto text-sm text-gray-700 leading-relaxed space-y-4">
+        <p class="bg-blue-50 p-3 border-l-4 border-paserLight text-paserDark italic"><strong>Importante:</strong> Este es un registro previo de datos. La asociación se hará efectiva tras la validación de datos y el pago correspondiente.</p>
+        <h3 class="font-bold text-paserDark uppercase text-xs tracking-wider">1. Admisión Académica y Cupos</h3>
+        <p>La inscripción a cursos y seminarios mensuales está sujeta a la disponibilidad de cupos. La condición de socio no garantiza vacante automática en todas las actividades.</p>
+        <h3 class="font-bold text-paserDark uppercase text-xs tracking-wider">2. Psicoterapia y Triaje Clínico</h3>
+        <p>El acceso a sesiones NO es automático. Todo aspirante pasará por una entrevista de admisión. PASER no aborda todas las patologías; en caso de no encuadrar, se brindará orientación externa sin derecho a reclamo de cuota.</p>
+        <h3 class="font-bold text-paserDark uppercase text-xs tracking-wider">3. Cuota y Permanencia</h3>
+        <p>La cuota es de carácter mensual. La falta de pago resultará en la baja inmediata de los beneficios institucionales.</p>
+      </div>
+      <div class="p-6 border-t border-gray-100 flex flex-col gap-4">
+        <label class="flex items-center space-x-2 cursor-pointer">
+          <input type="checkbox" id="checkAceptoTerminos" class="w-5 h-5 text-paserDark border-gray-300 rounded focus:ring-paserLight">
+          <span class="text-paserDark font-medium">He leído y acepto los términos de la Asociación PASER.</span>
+        </label>
+        <div class="flex gap-3">
+          <button onclick="cerrarModal()" class="flex-1 bg-gray-100 text-gray-600 py-3 rounded-xl font-bold hover:bg-gray-200 transition">Cancelar</button>
+          <button id="btnIrAlFormulario" disabled onclick="enviarAFormulario()" class="flex-[2] bg-paserDark text-white py-3 rounded-xl font-bold opacity-50 cursor-not-allowed transition">Aceptar e Inscribirme</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-paserDark text-white py-12 border-t-4 border-paserLight text-center">
+    <div class="container mx-auto px-4">
+      <img src="logo-paser2.PNG" alt="Logo PASER" class="h-24 mx-auto mb-6 object-contain" />
       <p class="text-lg font-semibold mb-2">Asociación PASER</p>
-      <div class="h-px w-16 bg-paserLight mx-auto mb-4 opacity-50"></div>
       <p class="text-sm opacity-60 uppercase tracking-widest">© 2024 - Todos los derechos reservados</p>
     </div>
   </footer>
 
+  <script>
+    let planElegido = "";
+
+    function abrirAvisoLegal(plan) {
+      planElegido = plan;
+      document.getElementById('nombrePlanModal').innerText = "Modalidad seleccionada: " + plan;
+      document.getElementById('modalLegal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Bloquea scroll
+    }
+
+    function cerrarModal() {
+      document.getElementById('modalLegal').classList.add('hidden');
+      document.body.style.overflow = 'auto'; // Habilita scroll
+    }
+
+    document.getElementById('checkAceptoTerminos').addEventListener('change', function(e) {
+      const btn = document.getElementById('btnIrAlFormulario');
+      if (e.target.checked) {
+        btn.disabled = false;
+        btn.classList.remove('opacity-50', 'cursor-not-allowed');
+        btn.classList.add('hover:bg-paserLight');
+      } else {
+        btn.disabled = true;
+        btn.classList.add('opacity-50', 'cursor-not-allowed');
+      }
+    });
+
+    function enviarAFormulario() {
+  // El link base que identifica tu formulario y la pregunta de "Modalidad"
+  const baseLink = "https://docs.google.com/forms/d/e/1FAIpQLSfQ-h-ThbzXHTC4Ut593LWQQjCPQvOXb94rjn9fQAJqK4AK0A/viewform?usp=pp_url&entry.1469162320=";
+  
+  let textoParaFormulario = "";
+
+  // Aquí hacemos la traducción automática
+  if (planElegido === "Socio Académico") {
+    textoParaFormulario = "Socio Capacitaciones"; 
+  } else if (planElegido === "Socio Full") {
+    textoParaFormulario = "Socio Full";
+  } else if (planElegido === "Socio Terapéutico") {
+    textoParaFormulario = "Socio Terapéutico";
+  }
+
+  // Unimos todo y redirigimos
+  window.location.href = baseLink + encodeURIComponent(textoParaFormulario);
+}
+  </script>
 </body>
 </html>
