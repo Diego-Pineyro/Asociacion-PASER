@@ -16,17 +16,15 @@
         }
       }
     }
-
     function toggleMenu() {
       const menu = document.getElementById("mobile-menu");
       menu.classList.toggle("hidden");
     }
   </script>
   <style>
-    /* Estilo para el fondo difuso en blanco y negro (Mismo efecto que en el inicio) */
     .team-hero-bg {
       background: linear-gradient(rgba(27, 54, 93, 0.8), rgba(27, 54, 93, 0.8)), 
-                  url('img/foto-equipo-paser-bn.png'); /* Usa la ruta correcta */
+                  url('img/foto-equipo-paser-bn.png'); 
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -41,13 +39,11 @@
         <div class="flex items-center">
           <img src="logo-paser2.PNG" alt="Logo de la Asociación PASER" class="h-28 md:h-32 w-auto object-contain" />
         </div>
-
         <button class="md:hidden text-paserDark" onclick="toggleMenu()">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-
         <ul id="mobile-menu" class="hidden md:flex md:items-center md:space-x-8 font-semibold uppercase text-sm tracking-wider">
           <li><a href="index.html" class="hover:text-paserLight transition">Inicio</a></li>
           <li><a href="quienes-somos.html" class="text-paserLight transition">Quiénes Somos</a></li>
@@ -93,7 +89,7 @@
 
     <section>
       <h2 class="text-3xl font-bold mb-12 text-center text-paserDark uppercase tracking-widest">Autoridades Institucionales</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         
         <div class="bg-white p-8 rounded-xl shadow-lg border-t-8 border-paserLight flex flex-col items-center text-center transform hover:-translate-y-1 transition">
           <img src="img/vanina-fernandez.jpg" alt="Dra. Vanina Fernández" class="w-40 h-40 rounded-full object-cover mb-6 border-4 border-slate-100 shadow-md">
@@ -101,7 +97,6 @@
           <p class="text-paserLight font-bold text-lg mb-4">Presidenta y Socia Fundadora</p>
           <p class="text-gray-600 italic border-t border-gray-100 pt-4 w-full">Abogada (UBA)</p>
         </div>
-
 
         <div class="bg-white p-8 rounded-xl shadow-lg border-t-8 border-paserDark flex flex-col items-center text-center transform hover:-translate-y-1 transition">
           <img src="img/diego-pinyero.jpg" alt="Dr. Diego Piñeyro" class="w-40 h-40 rounded-full object-cover mb-6 border-4 border-slate-100 shadow-md">
@@ -113,6 +108,14 @@
             <li>Director Lab. Neurociencias e IA (Fac. del Ejército)</li>
           </ul>
         </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-8 border-paserLight flex flex-col items-center text-center transform hover:-translate-y-1 transition">
+          <img src="img/stella.jpg"Stella Maris Correa" class="w-40 h-40 rounded-full object-cover mb-6 border-4 border-slate-100 shadow-md">
+          <h3 class="text-2xl font-bold text-paserDark">Stella Maris Correa</h3>
+          <p class="text-paserLight font-bold text-lg mb-4">Tesorera</p>
+          <p class="text-gray-600 italic border-t border-gray-100 pt-4 w-full uppercase text-sm">Gestión Institucional y Administrativa</p>
+        </div>
+
       </div>
     </section>
 
@@ -149,22 +152,19 @@
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
-          <img src="img/mara-hahn.jpg" alt="Lic. Mara Hahn" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
+          <img src="img/mara.jpg" alt="Lic. Mara Hahn" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
           <h3 class="font-bold text-lg text-paserDark">Lic. Mara Hahn</h3>
           <p class="text-paserLight text-sm font-bold">Especialista en Emergentología</p>
-          <p class="text-xs text-gray-500 mt-2 uppercase">TCC y Trastornos de Ansiedad</p>
+          <p class="text-xs text-gray-500 mt-2 uppercase">Estrés y Trastornos de Ansiedad</p>
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
           <img src="img/lic-abel.jpg" alt="Lic. Abel Cunto" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
           <h3 class="font-bold text-lg text-paserDark">Lic. Abel Cunto</h3>
           <p class="text-paserLight text-sm font-bold">Psicólogo (UBA)</p>
-          <p class="text-xs text-gray-500 mt-2 uppercase">Becario Doctoral,
-Instructor en CRM por la FA (INMAE)
-Diplomado en Psicología de la Emergencia y Apoyo Humanitario (AASM)
-Docente UBA
-</p>
+          <p class="text-xs text-gray-500 mt-2 uppercase">Becario Doctoral, Instructor en CRM por la FA (INMAE), Diplomado en Psicología de la Emergencia y Apoyo Humanitario (AASM), Docente UBA</p>
         </div>
+
         <div class="bg-white p-6 rounded-lg shadow border-b-4 border-slate-200 hover:border-paserLight transition flex flex-col items-center text-center">
           <img src="img/vero-dico.jpg" alt="Lic. Verónica Di Costanzo" class="w-28 h-28 rounded-full object-cover mb-4 border-2 border-slate-100">
           <h3 class="font-bold text-lg text-paserDark">Lic. Verónica Di Costanzo</h3>
@@ -201,16 +201,16 @@ Docente UBA
       <p class="text-sm opacity-60 uppercase tracking-widest">© 2024 - Todos los derechos reservados</p>
     </div>
   </footer>
-<script type="module">
-  import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
 
-  Typebot.initBubble({
-    typebot: "my-typebot-chssrr8",
-    theme: {
-      button: { backgroundColor: "#1D1D1D" },
-      chatWindow: { backgroundColor: "#F8F8F8" },
-    },
-  });
-</script>
+  <script type="module">
+    import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
+    Typebot.initBubble({
+      typebot: "my-typebot-chssrr8",
+      theme: {
+        button: { backgroundColor: "#1D1D1D" },
+        chatWindow: { backgroundColor: "#F8F8F8" },
+      },
+    });
+  </script>
 </body>
 </html>
